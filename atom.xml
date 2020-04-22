@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://urielggs.github.io</id>
-    <title>我的个人主页</title>
-    <updated>2020-04-22T18:55:05.594Z</updated>
+    <title>Uriel的技术博客</title>
+    <updated>2020-04-22T19:02:27.911Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://urielggs.github.io"/>
     <link rel="self" href="https://urielggs.github.io/atom.xml"/>
-    <subtitle>这是一个记录我的一切的存在。</subtitle>
+    <subtitle>这里将记录我的探索与发现</subtitle>
     <logo>https://urielggs.github.io/images/avatar.png</logo>
     <icon>https://urielggs.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 我的个人主页</rights>
+    <rights>All rights reserved 2020, Uriel的技术博客</rights>
 </feed>
