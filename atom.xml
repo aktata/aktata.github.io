@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://urielggs.github.io</id>
     <title>Uriel的博客</title>
-    <updated>2020-04-23T17:03:35.673Z</updated>
+    <updated>2020-04-23T17:17:09.205Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://urielggs.github.io"/>
     <link rel="self" href="https://urielggs.github.io/atom.xml"/>
@@ -16,18 +16,24 @@
         <link href="https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/">
         </link>
         <updated>2020-04-22T19:15:28.000Z</updated>
+        <summary type="html"><![CDATA[<p><em><strong>转载请注明出处</strong></em>[^转载]</p>
+<hr>
+<p>本博客目前仅介绍一种行之有效的安装方案，更多内容将在后期补充。我将尽量使本方法不具有时效性，以便读者在任何时候都可以轻松的复现此文章的内容。本文章适用于具有Nvidia图形处理器的Window10平台。将使用官方推荐的Anaconda安装。</p>
+]]></summary>
         <content type="html"><![CDATA[<p><em><strong>转载请注明出处</strong></em><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
 <hr>
 <p>本博客目前仅介绍一种行之有效的安装方案，更多内容将在后期补充。我将尽量使本方法不具有时效性，以便读者在任何时候都可以轻松的复现此文章的内容。本文章适用于具有Nvidia图形处理器的Window10平台。将使用官方推荐的Anaconda安装。</p>
+<!-- more -->
 <p><strong>流程如下：</strong></p>
 <ol>
-<li>安装Nvidia图形处理器驱动程序</li>
-<li>安装CUDA工具包</li>
-<li>安装cuDNN (可选)*</li>
-<li>安装Anaconda并配置Python环境</li>
-<li>安装PyTorch</li>
-<li>安装PyCharm编译器</li>
-<li>使用Basic MNIST Example进行示例测试</li>
+<li><a href="#%E5%AE%89%E8%A3%85nvidia%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%E5%99%A8%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F">安装Nvidia图形处理器驱动程序</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85cuda%E5%B7%A5%E5%85%B7%E5%8C%85">安装CUDA工具包</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85cudnn">安装cuDNN</a> (可选)*</li>
+<li><a href="#%E5%AE%89%E8%A3%85anaconda">安装Anaconda</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83">配置Python环境</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85pytorch">安装PyTorch</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85pycharm%E7%BC%96%E8%AF%91%E5%99%A8">安装PyCharm编译器</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8basic-mnist-example%E8%BF%9B%E8%A1%8C%E7%A4%BA%E4%BE%8B%E6%B5%8B%E8%AF%95">使用Basic MNIST Example进行示例测试</a></li>
 </ol>
 <h2 id="什么是pytorch">什么是PyTorch</h2>
 <p>PyTorch是一个基于python的科学计算包，主要针对两类人群：</p>
@@ -37,7 +43,7 @@
 </ul>
 <p>访问PyTorch社区的<a href="https://pytorch.apachecn.org/">中文文档</a>了解更多</p>
 <figure data-type="image" tabindex="1"><img src="https://urielggs.github.io/post-images/1587615001444.jpg" alt="" loading="lazy"></figure>
-<h2 id="安装pytorch">安装PyTorch</h2>
+<h2 id="安装并验证pytorch">安装并验证PyTorch</h2>
 <h3 id="安装nvidia图形处理器驱动程序">安装Nvidia图形处理器驱动程序</h3>
 <p>访问<a href="https://www.nvidia.com/Download/index.aspx?lang=en-us">Nvidia支持网站</a>下载与显卡对应的驱动程序并安装<br>
 GeForce系列显卡请访问<a href="https://www.geforce.com/drivers">GeForce驱动下载</a></p>
@@ -90,7 +96,7 @@ GeForce系列显卡请访问<a href="https://www.geforce.com/drivers">GeForce驱
 <figure data-type="image" tabindex="16"><img src="https://urielggs.github.io/post-images/1587638329211.jpg" alt="" loading="lazy"></figure>
 <p>输入 <code>conda info -e</code> 看到torch环境已经添加成功</p>
 <figure data-type="image" tabindex="17"><img src="https://urielggs.github.io/post-images/1587639039115.jpg" alt="" loading="lazy"></figure>
-<h3 id="安装pytorch-2">安装PyTorch</h3>
+<h3 id="安装pytorch">安装PyTorch</h3>
 <h4 id="安装-3">安装</h4>
 <p>参考<a href="https://pytorch.org/get-started/locally/">PyTorch官网GET STARTED</a>进行安装</p>
 <p>打开Anaconda Prompt或命令提示符，输入 <code>conda activate torch</code> 激活PyTorch环境</p>
