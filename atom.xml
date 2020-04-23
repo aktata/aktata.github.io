@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://urielggs.github.io</id>
     <title>Uriel的博客</title>
-    <updated>2020-04-23T16:45:55.448Z</updated>
+    <updated>2020-04-23T17:00:24.087Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://urielggs.github.io"/>
     <link rel="self" href="https://urielggs.github.io/atom.xml"/>
@@ -16,7 +16,9 @@
         <link href="https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/">
         </link>
         <updated>2020-04-22T19:15:28.000Z</updated>
-        <content type="html"><![CDATA[<p>本博客目前仅介绍一种行之有效的安装方案，更多内容将在后期补充。我将尽量使本方法不具有时效性，以便读者在任何时候都可以轻松的复现此文章的内容。本文章适用于具有Nvidia图形处理器的Window10平台。将使用官方推荐的Anaconda安装。</p>
+        <content type="html"><![CDATA[<p>转载请注明<a href="https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/">出处</a><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<hr>
+<p>本博客目前仅介绍一种行之有效的安装方案，更多内容将在后期补充。我将尽量使本方法不具有时效性，以便读者在任何时候都可以轻松的复现此文章的内容。本文章适用于具有Nvidia图形处理器的Window10平台。将使用官方推荐的Anaconda安装。</p>
 <p><strong>流程如下：</strong></p>
 <ol>
 <li>安装Nvidia图形处理器驱动程序</li>
@@ -74,7 +76,7 @@ GeForce系列显卡请访问<a href="https://www.geforce.com/drivers">GeForce驱
 </ul>
 <figure data-type="image" tabindex="12"><img src="https://urielggs.github.io/post-images/1587634403501.jpg" alt="" loading="lazy"></figure>
 <ul>
-<li>勾选将Anaconda添加到您的PATH环境变量中<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></li>
+<li>勾选将Anaconda添加到您的PATH环境变量中<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li>
 </ul>
 <figure data-type="image" tabindex="13"><img src="https://urielggs.github.io/post-images/1587634872735.jpg" alt="" loading="lazy"></figure>
 <h4 id="验证-2">验证</h4>
@@ -150,14 +152,18 @@ torch.cuda.is_available()
 <p>逐步执行以下方案亦可解决</p>
 <ol>
 <li>使用<a href="www.google.com">Google搜素引擎</a>搜索问题关键字，参阅检索到的相关文章</li>
-<li>参阅相关文档<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li>
+<li>参阅相关文档<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></li>
+<li>在本文下方留言</li>
+<li>联系我</li>
 </ol>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>虽然Anaconda官方文档不推荐勾选，但这里需要勾选 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+<li id="fn1" class="footnote-item"><p>https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/ <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn2" class="footnote-item"><p>Nvidia, Anaconda, PyTorch, JetBrains等官方文档 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+<li id="fn2" class="footnote-item"><p>在Anaconda官方文档不推荐勾选，但这里需要勾选 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p><a href="https://docs.nvidia.com/">Nvidia</a>, <a href="https://docs.anaconda.com/">Anaconda</a>, <a href="https://pytorch.org/docs/stable/index.html">PyTorch</a>, <a href="https://www.jetbrains.com/">JetBrains</a>等官方文档 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
