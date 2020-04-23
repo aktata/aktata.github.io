@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://urielggs.github.io</id>
-    <title>Uriel的技术博客</title>
-    <updated>2020-04-23T14:46:02.762Z</updated>
+    <title>Uriel的博客</title>
+    <updated>2020-04-23T15:37:29.229Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://urielggs.github.io"/>
     <link rel="self" href="https://urielggs.github.io/atom.xml"/>
     <subtitle>这里将记录我的探索与发现</subtitle>
     <logo>https://urielggs.github.io/images/avatar.png</logo>
     <icon>https://urielggs.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Uriel的技术博客</rights>
+    <rights>All rights reserved 2020, Uriel的博客</rights>
     <entry>
         <title type="html"><![CDATA[PyTorch在Windows10环境下的安装与测试]]></title>
         <id>https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/</id>
