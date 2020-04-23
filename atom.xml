@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://urielggs.github.io</id>
     <title>Uriel的技术博客</title>
-    <updated>2020-04-23T05:49:23.249Z</updated>
+    <updated>2020-04-23T14:41:18.718Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://urielggs.github.io"/>
     <link rel="self" href="https://urielggs.github.io/atom.xml"/>
@@ -11,17 +11,17 @@
     <icon>https://urielggs.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Uriel的技术博客</rights>
     <entry>
-        <title type="html"><![CDATA[PyTorch在Windows10下的安装与测试]]></title>
+        <title type="html"><![CDATA[PyTorch 在 Windows 10 下 的 安 装 与 测 试]]></title>
         <id>https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/</id>
         <link href="https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/">
         </link>
         <updated>2020-04-22T19:15:28.000Z</updated>
         <content type="html"><![CDATA[<p>本博客目前仅介绍一种行之有效的安装方案，更多内容将在后期补充。我将尽量使本方法不具有时效性，以便读者在任何时候都可以轻松的复现此文章的内容。本文章适用于具有Nvidia图形处理器的Window10平台。将使用官方推荐的Anaconda安装。</p>
-<p>流程如下：</p>
+<p><strong>流程如下：</strong></p>
 <ol>
 <li>安装Nvidia图形处理器驱动程序</li>
 <li>安装CUDA工具包</li>
-<li>安装cuDNN</li>
+<li>安装cuDNN (可选)*</li>
 <li>安装Anaconda并配置Python环境</li>
 <li>安装PyTorch</li>
 <li>安装PyCharm编译器</li>
@@ -33,20 +33,116 @@
 <li>作为NumPy的替代品，可以利用GPU的性能进行计算</li>
 <li>作为一个高灵活性、速度快的深度学习平台</li>
 </ul>
-<p>访问PyTorch社区的<a href="https://pytorch.apachecn.org/">中文文档</a>了解更多.<br>
-<img src="https://urielggs.github.io/post-images/1587615001444.jpg" alt="" loading="lazy"></p>
+<p>访问PyTorch社区的<a href="https://pytorch.apachecn.org/">中文文档</a>了解更多</p>
+<figure data-type="image" tabindex="1"><img src="https://urielggs.github.io/post-images/1587615001444.jpg" alt="" loading="lazy"></figure>
 <h2 id="安装pytorch">安装PyTorch</h2>
 <h3 id="安装nvidia图形处理器驱动程序">安装Nvidia图形处理器驱动程序</h3>
-<p>访问<a href="https://www.nvidia.com/Download/index.aspx?lang=en-us">Nvidia支持网站</a>下载与显卡对应的驱动程序并安装.<br>
-GeForce系列显卡请访问<a href="https://www.geforce.com/drivers">GeForce驱动下载</a>.<br>
-<img src="https://urielggs.github.io/post-images/1587614504786.jpg" alt="" loading="lazy"></p>
+<p>访问<a href="https://www.nvidia.com/Download/index.aspx?lang=en-us">Nvidia支持网站</a>下载与显卡对应的驱动程序并安装<br>
+GeForce系列显卡请访问<a href="https://www.geforce.com/drivers">GeForce驱动下载</a></p>
+<figure data-type="image" tabindex="2"><img src="https://urielggs.github.io/post-images/1587614504786.jpg" alt="" loading="lazy"></figure>
 <h3 id="安装cuda工具包">安装CUDA工具包</h3>
-<p>访问<a href="https://developer.nvidia.com/cuda-downloads">Nvidia开发者网站</a>下载Windows10版本CUDA.<br>
-<img src="https://urielggs.github.io/post-images/1587615956918.jpg" alt="" loading="lazy"><br>
-CUDA需要Visual Studio作为依赖项,安装前请先安装<a href="https://visualstudio.microsoft.com/vs/">最新版Visual Studio</a>.<br>
-<img src="https://urielggs.github.io/post-images/1587620757636.jpg" alt="" loading="lazy"><br>
-运行安装程序,与显卡驱动安装步骤类似,参考<a href="https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html#abstract">CUDA官方文档</a>完成安装.<br>
-<img src="https://urielggs.github.io/post-images/1587620338074.jpg" alt="" loading="lazy"></p>
+<h4 id="安装">安装</h4>
+<p>访问<a href="https://developer.nvidia.com/cuda-downloads">Nvidia开发者网站</a>下载Windows10版本CUDA</p>
+<figure data-type="image" tabindex="3"><img src="https://urielggs.github.io/post-images/1587615956918.jpg" alt="" loading="lazy"></figure>
+<p>CUDA需要Visual Studio IDE作为依赖项,安装前请先安装<a href="https://visualstudio.microsoft.com/vs/">最新版Visual Studio IDE</a></p>
+<figure data-type="image" tabindex="4"><img src="https://urielggs.github.io/post-images/1587620757636.jpg" alt="" loading="lazy"></figure>
+<p>运行安装程序,与显卡驱动安装步骤类似,参考<a href="https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html#abstract">CUDA官方文档</a>完成安装</p>
+<figure data-type="image" tabindex="5"><img src="https://urielggs.github.io/post-images/1587620338074.jpg" alt="" loading="lazy"></figure>
+<h4 id="验证">验证</h4>
+<p>使用命令提示符运行<code>nvcc -V</code>应返回CUDA版本号</p>
+<figure data-type="image" tabindex="6"><img src="https://urielggs.github.io/post-images/1587625530171.jpg" alt="" loading="lazy"></figure>
+<p>使用Visual Studio IDE运行<code>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2\Samples_vs2019.sln</code><br>
+将解决方案配置为<code>Release</code> <code>x64</code>,右键生成<code>1_Utilities</code></p>
+<figure data-type="image" tabindex="7"><img src="https://urielggs.github.io/post-images/1587624327886.jpg" alt="" loading="lazy"></figure>
+<p>使用命令提示符运行上一步生成的<code>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2\bin\win64\Release\deviceQuery.exe</code>应显示返回值<code>Result = PASS</code></p>
+<figure data-type="image" tabindex="8"><img src="https://urielggs.github.io/post-images/1587624981193.jpg" alt="" loading="lazy"></figure>
+<p>使用命令提示符运行生成的<code>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2\bin\win64\Release\bandwidthTest.exe</code>应显示返回值<code>Result = PASS</code></p>
+<figure data-type="image" tabindex="9"><img src="https://urielggs.github.io/post-images/1587626496131.jpg" alt="" loading="lazy"></figure>
+<h3 id="安装cudnn">安装cuDNN*</h3>
+<p>访问<a href="https://developer.nvidia.com/rdp/cudnn-download">Nvidia开发者网站</a>下载最新版cuDNN,注意要与CUDA版本对应</p>
+<figure data-type="image" tabindex="10"><img src="https://urielggs.github.io/post-images/1587627036122.jpg" alt="" loading="lazy"></figure>
+<p>解压下载到的cuDNN压缩包,将解压出的<code>cuda</code>文件夹包含的<code>bin</code>, <code>include</code>, <code>lib</code>复制到CUDA安装目录<code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2</code>中</p>
+<figure data-type="image" tabindex="11"><img src="https://urielggs.github.io/post-images/1587627854672.jpg" alt="" loading="lazy"></figure>
+<h3 id="安装anaconda">安装Anaconda</h3>
+<h4 id="安装-2">安装</h4>
+<p>访问<a href="https://www.anaconda.com/distribution/">Anaconda官网</a>下载适用于Windows的Python3.7版本Anaconda安装程序<br>
+<img src="https://urielggs.github.io/post-images/1587633725230.jpg" alt="" loading="lazy"></p>
+<p>参考<a href="https://docs.anaconda.com/anaconda/install/windows/">Anaconda官方文档</a>进行安装<br>
+其中需要注意：</p>
+<ul>
+<li>Install for 选择为所有用户安装，这不是必须的但推荐这样做</li>
+</ul>
+<figure data-type="image" tabindex="12"><img src="https://urielggs.github.io/post-images/1587634403501.jpg" alt="" loading="lazy"></figure>
+<ul>
+<li>勾选将Anaconda添加到您的PATH环境变量中，虽然Anaconda官方文档不推荐勾选，但这里需要勾选</li>
+</ul>
+<figure data-type="image" tabindex="13"><img src="https://urielggs.github.io/post-images/1587634872735.jpg" alt="" loading="lazy"></figure>
+<h4 id="验证-2">验证</h4>
+<p>参考<a href="https://docs.anaconda.com/anaconda/install/verify-install/">Anaconda官方文档</a>进行安装验证<br>
+打开Anaconda Prompt或命令提示符，输入 <code>python</code> 回车，如果Anaconda已安装且正在运行，则其启动时显示的版本信息将包含 <code>Anaconda</code> ，输入命令 <code>quit()</code> 退出Python Shell</p>
+<figure data-type="image" tabindex="14"><img src="https://urielggs.github.io/post-images/1587636979917.jpg" alt="" loading="lazy"></figure>
+<h3 id="配置python环境">配置Python环境</h3>
+<p>打开Anaconda Prompt或命令提示符，输入 <code>conda update -n base -c defaults conda</code> 更新Anaconda</p>
+<figure data-type="image" tabindex="15"><img src="https://urielggs.github.io/post-images/1587638593726.jpg" alt="" loading="lazy"></figure>
+<p>输入 <code>conda create --name torch python=3.8</code> 创建Python环境</p>
+<figure data-type="image" tabindex="16"><img src="https://urielggs.github.io/post-images/1587638329211.jpg" alt="" loading="lazy"></figure>
+<p>输入 <code>conda info -e</code> 看到torch环境已经添加成功</p>
+<figure data-type="image" tabindex="17"><img src="https://urielggs.github.io/post-images/1587639039115.jpg" alt="" loading="lazy"></figure>
+<h3 id="安装pytorch-2">安装PyTorch</h3>
+<h4 id="安装-3">安装</h4>
+<p>参考<a href="https://pytorch.org/get-started/locally/">PyTorch官网GET STARTED</a>进行安装</p>
+<p>打开Anaconda Prompt或命令提示符，输入 <code>conda activate torch</code> 激活PyTorch环境</p>
+<figure data-type="image" tabindex="18"><img src="https://urielggs.github.io/post-images/1587638790838.jpg" alt="" loading="lazy"></figure>
+<p>访问<a href="https://pytorch.org/">PyTorch官网</a><br>
+在QUICK START LOCALLY中进行选择：</p>
+<ul>
+<li>PyTorch Build: <code>Stable (1.5)</code></li>
+<li>Your OS: <code>Windows</code></li>
+<li>Package: <code>Conda</code></li>
+<li>Language: <code>Python</code></li>
+<li>CUDA: <code>10.2</code> （若未安装CUDA或不具备安装CUDA条件则选<code>None</code> ）</li>
+</ul>
+<p>复制Run this Command后的内容</p>
+<figure data-type="image" tabindex="19"><img src="https://urielggs.github.io/post-images/1587639788858.jpg" alt="" loading="lazy"></figure>
+<p>在已激活的torch环境中运行复制的内容并完成安装</p>
+<figure data-type="image" tabindex="20"><img src="https://urielggs.github.io/post-images/1587640333993.jpg" alt="" loading="lazy"></figure>
+<h4 id="验证-3">验证</h4>
+<p>使用PyTorch构造一个随机初始化的张量：<br>
+打开Anaconda Prompt或命令提示符，输入 <code>conda activate torch</code> 激活PyTorch环境，输入：<code>python</code><br>
+然后输入以下代码：</p>
+<pre><code class="language-python">from __future__ import print_function
+import torch
+x = torch.rand(5, 3)
+print(x)
+</code></pre>
+<p>应输出与下方类似的内容：</p>
+<pre><code class="language-python">tensor([[0.3380, 0.3845, 0.3217],
+        [0.8337, 0.9050, 0.2650],
+        [0.2979, 0.7141, 0.9069],
+        [0.1449, 0.1132, 0.1375],
+        [0.4675, 0.3947, 0.1426]])
+</code></pre>
+<p>检查PyTorch是否启用了GPU驱动程序和CUDA并可以通过其运行<br>
+运行以下命令以返回是否启用了CUDA驱动程序：</p>
+<pre><code class="language-python">import torch
+torch.cuda.is_available()
+</code></pre>
+<p>输入命令 <code>quit()</code> 退出Python Shell，输入命令 <code>conda deactivate</code> 退出torch环境</p>
+<figure data-type="image" tabindex="21"><img src="https://urielggs.github.io/post-images/1587647798274.jpg" alt="" loading="lazy"></figure>
+<h3 id="安装pycharm编译器">安装PyCharm编译器</h3>
+<p>访问<a href="https://www.jetbrains.com/toolbox-app/">JetBrains官网</a>，下载并安装Toolbox App</p>
+<figure data-type="image" tabindex="22"><img src="https://urielggs.github.io/post-images/1587643137973.jpg" alt="" loading="lazy"></figure>
+<p>运行Toolbox App，点击安装PyCharm Professional或PyCharm Community，其中PyCharm Professional是收费的，如果你是学生可以<a href="https://www.jetbrains.com/shop/eform/students">申请Products for Learning</a>来免费使用</p>
+<figure data-type="image" tabindex="23"><img src="https://urielggs.github.io/post-images/1587645385426.jpg" alt="" loading="lazy"></figure>
+<p><strong>安装阶段至此结束</strong></p>
+<hr>
+<h2 id="使用basic-mnist-example进行示例测试">使用Basic MNIST Example进行示例测试</h2>
+<p>访问PyTorch的Github仓库，检索到<a href="https://github.com/pytorch/examples/tree/master/mnist">Basic MNIST Example仓库</a>，Fork或Download代码到本地</p>
+<p>配置Python解释器为上文安装的torch</p>
+<figure data-type="image" tabindex="24"><img src="https://urielggs.github.io/post-images/1587651517915.jpg" alt="" loading="lazy"></figure>
+<p>将代码中保存模型的默认值修改为 <code>True</code> 以保存训练到的模型参数</p>
+<figure data-type="image" tabindex="25"><img src="https://urielggs.github.io/post-images/1587652528655.jpg" alt="" loading="lazy"></figure>
+<p>运行代码开始训练模型</p>
 ]]></content>
     </entry>
 </feed>
