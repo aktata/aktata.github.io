@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://urielggs.github.io</id>
     <title>Uriel的技术博客</title>
-    <updated>2020-04-22T19:02:27.911Z</updated>
+    <updated>2020-04-23T05:47:12.893Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://urielggs.github.io"/>
     <link rel="self" href="https://urielggs.github.io/atom.xml"/>
@@ -10,4 +10,43 @@
     <logo>https://urielggs.github.io/images/avatar.png</logo>
     <icon>https://urielggs.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Uriel的技术博客</rights>
+    <entry>
+        <title type="html"><![CDATA[PyTorch在Windows10下的安装与测试]]></title>
+        <id>https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/</id>
+        <link href="https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/">
+        </link>
+        <updated>2020-04-22T19:15:28.000Z</updated>
+        <content type="html"><![CDATA[<p>本博客目前仅介绍一种行之有效的安装方案，更多内容将在后期补充。我将尽量使本方法不具有时效性，以便读者在任何时候都可以轻松的复现此文章的内容。本文章适用于具有Nvidia图形处理器的Window10平台。将使用官方推荐的Anaconda安装。</p>
+<p>流程如下：</p>
+<ol>
+<li>安装Nvidia图形处理器驱动程序</li>
+<li>安装CUDA工具包</li>
+<li>安装cuDNN</li>
+<li>安装Anaconda并配置Python环境</li>
+<li>安装PyTorch</li>
+<li>安装PyCharm编译器</li>
+<li>使用Basic MNIST Example进行示例测试</li>
+</ol>
+<h2 id="什么是pytorch">什么是PyTorch</h2>
+<p>PyTorch是一个基于python的科学计算包，主要针对两类人群：</p>
+<ul>
+<li>作为NumPy的替代品，可以利用GPU的性能进行计算</li>
+<li>作为一个高灵活性、速度快的深度学习平台</li>
+</ul>
+<p>访问PyTorch社区的<a href="https://pytorch.apachecn.org/">中文文档</a>了解更多.<br>
+<img src="https://urielggs.github.io/post-images/1587615001444.jpg" alt="" loading="lazy"></p>
+<h2 id="安装pytorch">安装PyTorch</h2>
+<h3 id="安装nvidia图形处理器驱动程序">安装Nvidia图形处理器驱动程序</h3>
+<p>访问<a href="https://www.nvidia.com/Download/index.aspx?lang=en-us">Nvidia支持网站</a>下载与显卡对应的驱动程序并安装.<br>
+GeForce系列显卡请访问<a href="https://www.geforce.com/drivers">GeForce驱动下载</a>.<br>
+<img src="https://urielggs.github.io/post-images/1587614504786.jpg" alt="" loading="lazy"></p>
+<h3 id="安装cuda工具包">安装CUDA工具包</h3>
+<p>访问<a href="https://developer.nvidia.com/cuda-downloads">Nvidia开发者网站</a>下载Windows10版本CUDA.<br>
+<img src="https://urielggs.github.io/post-images/1587615956918.jpg" alt="" loading="lazy"><br>
+CUDA需要Visual Studio作为依赖项,安装前请先安装<a href="https://visualstudio.microsoft.com/vs/">最新版Visual Studio</a>.<br>
+<img src="https://urielggs.github.io/post-images/1587620757636.jpg" alt="" loading="lazy"><br>
+运行安装程序,与显卡驱动安装步骤类似,参考<a href="https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html#abstract">CUDA官方文档</a>完成安装.<br>
+<img src="https://urielggs.github.io/post-images/1587620338074.jpg" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
 </feed>
