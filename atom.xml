@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://urielggs.github.io</id>
     <title>Uriel的博客</title>
-    <updated>2020-04-24T09:12:32.716Z</updated>
+    <updated>2020-04-26T06:29:25.820Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://urielggs.github.io"/>
     <link rel="self" href="https://urielggs.github.io/atom.xml"/>
@@ -69,6 +69,7 @@ GeForce系列显卡请访问<a href="https://www.geforce.com/drivers">GeForce驱
 <h3 id="安装cudnn">安装cuDNN*</h3>
 <p>访问<a href="https://developer.nvidia.com/rdp/cudnn-download">Nvidia开发者网站</a>下载最新版cuDNN,注意要与CUDA版本对应</p>
 <figure data-type="image" tabindex="10"><img src="https://urielggs.github.io/post-images/1587627036122.jpg" alt="" loading="lazy"></figure>
+<p>参考<a href="https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html">cuDNN官方文档</a>进行安装</p>
 <p>解压下载到的cuDNN压缩包,将解压出的<code>cuda</code>文件夹包含的<code>bin</code>, <code>include</code>, <code>lib</code>复制到CUDA安装目录<code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2</code>中</p>
 <figure data-type="image" tabindex="11"><img src="https://urielggs.github.io/post-images/1587627854672.jpg" alt="" loading="lazy"></figure>
 <h3 id="安装anaconda">安装Anaconda</h3>
@@ -299,7 +300,7 @@ if __name__ == '__main__':
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p><a href="https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/">https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn2" class="footnote-item"><p>在Anaconda官方文档不推荐勾选，但这里需要勾选 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+<li id="fn2" class="footnote-item"><p>在Anaconda官方文档不推荐勾选，但本文推荐勾选，勾选添加环境变量用以在命令提示符中执行 <code>conda</code> 命令 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="fn3" class="footnote-item"><p><a href="https://docs.nvidia.com/">Nvidia</a>, <a href="https://docs.anaconda.com/">Anaconda</a>, <a href="https://pytorch.org/docs/stable/index.html">PyTorch</a>, <a href="https://www.jetbrains.com/">JetBrains</a>等官方文档 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
 </li>
