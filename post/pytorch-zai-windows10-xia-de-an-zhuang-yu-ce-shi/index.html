@@ -74,11 +74,6 @@
         <div class="markdown mb-8" v-pre>
           <p>本博客目前仅介绍一种行之有效的安装方案，更多内容将在后期补充。我将尽量使本方法不具有时效性，以便读者在任何时候都可以轻松的复现此文章的内容。本文章适用于具有Nvidia图形处理器的Window10平台。将使用官方推荐的Anaconda安装。</p>
 <!-- more -->
-<hr>
-<p>本文作者：UrielGGs<br>
-本文链接： <a href="https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/">PyTorch在Windows10环境下的安装与测试</a><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup><br>
-版权声明： 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！</p>
-<hr>
 <p><strong>流程如下：</strong></p>
 <ol>
 <li><a href="#%E5%AE%89%E8%A3%85nvidia%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%E5%99%A8%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F">安装Nvidia图形处理器驱动程序</a></li>
@@ -138,7 +133,7 @@ GeForce系列显卡请访问<a href="https://www.geforce.com/drivers">GeForce驱
 </ul>
 <figure data-type="image" tabindex="12"><img src="https://urielggs.github.io/post-images/1587634403501.jpg" alt="" loading="lazy"></figure>
 <ul>
-<li>勾选将Anaconda添加到您的PATH环境变量中<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li>
+<li>勾选将Anaconda添加到您的PATH环境变量中<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></li>
 </ul>
 <figure data-type="image" tabindex="13"><img src="https://urielggs.github.io/post-images/1587634872735.jpg" alt="" loading="lazy"></figure>
 <h4 id="验证-2">验证</h4>
@@ -346,18 +341,23 @@ if __name__ == '__main__':
 <p>逐步执行以下方案亦可解决</p>
 <ol>
 <li>使用<a href="www.google.com">Google搜素引擎</a>搜索问题关键字，参阅检索到的相关文章</li>
-<li>参阅相关文档<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></li>
+<li>参阅相关文档<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li>
 <li>在本文下方留言</li>
 <li>联系我</li>
 </ol>
+<hr>
+<p>本文作者：UrielGGs<br>
+本文链接： <a href="https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/">PyTorch在Windows10环境下的安装与测试</a><sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup><br>
+版权声明： 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</p>
+<hr>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/">https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+<li id="fn1" class="footnote-item"><p>在Anaconda官方文档不推荐勾选，但本文推荐勾选，勾选添加环境变量用以在命令提示符中执行 <code>conda</code> 命令 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn2" class="footnote-item"><p>在Anaconda官方文档不推荐勾选，但本文推荐勾选，勾选添加环境变量用以在命令提示符中执行 <code>conda</code> 命令 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+<li id="fn2" class="footnote-item"><p><a href="https://docs.nvidia.com/">Nvidia</a>, <a href="https://docs.anaconda.com/">Anaconda</a>, <a href="https://pytorch.org/docs/stable/index.html">PyTorch</a>, <a href="https://www.jetbrains.com/">JetBrains</a>等官方文档 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn3" class="footnote-item"><p><a href="https://docs.nvidia.com/">Nvidia</a>, <a href="https://docs.anaconda.com/">Anaconda</a>, <a href="https://pytorch.org/docs/stable/index.html">PyTorch</a>, <a href="https://www.jetbrains.com/">JetBrains</a>等官方文档 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+<li id="fn3" class="footnote-item"><p><a href="https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/">https://urielggs.github.io/post/pytorch-zai-windows10-xia-de-an-zhuang-yu-ce-shi/</a> <a href="#fnref3" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
@@ -387,7 +387,7 @@ if __name__ == '__main__':
       
 
       <footer class="py-12 text-center px-4 md:px-0" v-pre>
-  
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
 </footer>
     </div>
 
